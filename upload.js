@@ -1,6 +1,5 @@
 $(document).ready(function(){
     
-
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
     const redirect_uri = "http://localhost:8080/upload/upload.html" ;
@@ -8,9 +7,7 @@ $(document).ready(function(){
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
     var client_id = "588609167741-ohbbiqnddh4ofhfoe854b0k15upfc06l.apps.googleusercontent.com";
-    
-
-    $.ajax({
+        $.ajax({
         type: 'POST',
         url: "https://www.googleapis.com/oauth2/v4/token",
         data: {code:code
@@ -27,10 +24,7 @@ $(document).ready(function(){
            localStorage.setItem("refreshToken",resultData.refreshToken);
            localStorage.setItem("expires_in",resultData.expires_in);
            window.history.pushState({}, document.title, "/GitLoginApp/" + "upload.html");
-           
-           
-           
-           
+         
         }
   });
 
