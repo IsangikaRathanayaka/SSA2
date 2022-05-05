@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
-    const redirect_uri = "http://localhost:8080/upload/upload.html" ;
+    const redirect_uri = "http://localhost:8080/upload/send.html" ;
     const client_secret = "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"; 
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
@@ -23,7 +23,7 @@ $(document).ready(function(){
            localStorage.setItem("accessToken",resultData.access_token);
            localStorage.setItem("refreshToken",resultData.refreshToken);
            localStorage.setItem("expires_in",resultData.expires_in);
-           window.history.pushState({}, document.title, "/GitLoginApp/" + "upload.html");
+           window.history.pushState({}, document.title, "/upload/" + "send.html");
          
         }
   });
