@@ -16,7 +16,7 @@ Installation guide lines for simple gooogle drive file uploader with Oauth.
 03.create a folder with the name "upload" in side the /opt/lampp/htdocs/
     # sudo mkdir /opt/lampp/htdocs/upload
     
-04. Copy all 4 files (index.html,main.js,upload.html,upload.js) to the upload directory.
+04. Copy all 4 files (index.html,submit.js,send.html,send.js) to the upload directory.
 
 05. Start the Xampp apache service.
     #sudo /opt/lampp/xampp startapache
